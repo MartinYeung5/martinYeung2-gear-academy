@@ -4,6 +4,8 @@ github:
 https://github.com/MartinYeung5/martinYeung2-gear-academy
 
 Vara Network Testnet (wss://testnet.vara.network) address:
+Wordle Program: 0x6aa4e93442f17ac5c369febf7294bc9b80eb6efa39b4909e84ccd8ceb2ca3bcc
+Game Session Program: 0x35a1d60f9c50880232319dceb2453ad2063ab93124243147bcc90fc8062228c7
 
 學員號碼/Student Number:
 50
