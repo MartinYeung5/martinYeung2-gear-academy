@@ -1,7 +1,7 @@
-only for homework
+Assignment
 
 github:
-
+https://github.com/MartinYeung5/martinYeung2-gear-academy
 
 Vara Network Testnet (wss://testnet.vara.network) address:
 
