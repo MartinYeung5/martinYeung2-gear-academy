@@ -2,17 +2,6 @@
 use gstd::{collections::HashMap, exec, msg, prelude::*, ActorId};
 use wordle_io::*;
 
-pub struct WordleMetadata;
-
-impl Metadata for WordleMetadata {
-    type Init = ();
-    type Handle = InOut<Action, Event>;
-    type Others = ();
-    type Reply = ();
-    type Signal = ();
-    type State = ();
-}
-
 static mut WORDLE: Option<Wordle> = None;
 
 const BANK_OF_WORDS: [&str; 3] = ["house", "human", "horse"];
@@ -81,25 +70,4 @@ pub fn get_random_value(range: u8) -> u8 {
     random_input[0] = random_input[0].wrapping_add(seed);
     let (random, _) = exec::random(random_input).expect("Error in getting random number");
     random[0] % range
-}
-
-pub enum Action {
-    StartGame {
-        user: ActorId,
-    },
-    CheckWord {
-        user: ActorId,
-        word: String,
-    }
-}
-
-pub enum Event {
-    GameStarted {
-        user: ActorId,
-    },
-    WordChecked {
-        user: ActorId,
-        correct_positions: Vec<u8>,
-        contained_in_word: Vec<u8>,
-    },
 }
